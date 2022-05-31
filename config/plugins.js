@@ -8,13 +8,13 @@ module.exports = ({ env }) => ({
     },
     actionOptions: {
       upload: {
-        folder: "AlbergueA4P",
+        folder: env("CLOUDINARY_FOLDER"),
       },
       delete: {},
     },
   },
   graphql: {
-    endpoint: "/graphql",
+    endpoint: env("ENDPOINT"),
     shadowCRUD: true,
     playgroundAlways: true,
     depthLimit: 100,
